@@ -1,0 +1,61 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<style>
+     body{
+         font-family:sans-srief,Arial,Comic sans;
+         margin:0;
+         padding:50px;
+         background-color:#b5658f;
+   }
+</style>
+<script>
+  function ac(){
+      document.getElementById("res").value=""
+  }
+  function show(input){
+      document.getElementById("res").value+=input;
+  }
+  function cal(){
+     var output=eval(document.getElementById("res").value);
+     document.getElementById("res").value=output;
+  }
+</script>
+<body>
+   <table border="2">
+    <h1>Calculator</h1>
+       <tr>
+         <td colspan="3"><input type="text" id="res" placeholder="enter value"/></td>
+         <td align="center"><button onclick="ac()">AC</td>
+       </tr>
+    <tr>
+       <td align="center"><button onclick="show('1')">1</td>
+       <td align="center"><button onclick="show('2')">2</td>
+       <td align="center"><button onclick="show('3')">3</td>
+       <td align="center"><button onclick="show('+')">+</td>
+    </tr>
+    
+    <tr>
+       <td align="center"><button onclick="show('4')">4</td>
+       <td align ="center"><button onclick="show('5')">5</td>
+       <td align ="center"><button onclick="show('6')">6</td>
+    <td><button onclick="show('-')">-</td>
+    </tr>
+    
+    <tr>
+       <td align="center"><button onclick="show('7')">7</td>
+       <td align="center"><button onclick="show('8')">8</td>
+       <td align="center"><button onclick="show('9')">9</td>
+       <td align="center"><button onclick="show('*')">*</td>
+    </tr>
+    
+    <tr>
+       <td align="center"><button onclick="show('0')">0</td>
+       <td align="center"><button onclick="show('%')">%</td>
+       <td align="center"><button onclick="show('/')">/</td>
+       <td align="center"><button onclick="cal('=')">=</td>
+    </tr>
+   </table>
+</body>
+</html>
